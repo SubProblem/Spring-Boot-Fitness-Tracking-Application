@@ -28,10 +28,10 @@ The project is built using the following technologies:
 
 The application exposes the following RESTful API endpoints:
 
-- `/api/register` - Register a new user account.
-- `/api/login` - User login to obtain JWT token.
-- `/api/workouts` - CRUD operations for managing workouts.
-- `/api/foods` - CRUD operations for managing food items.
-- `/api/admin/users` - Admin-only endpoint for managing user accounts.
-- `/api/admin/products` - Admin-only endpoint for managing products.
+- `/api/v1/auth/register` - Register a new user account.
+- `/api/v1/auth/authenticatelogin` - User login to obtain JWT token.
+- `/api/v1/auth/logout` - CRUD operations for managing workouts.
+- `/api/v1/user/` - CRUD operations for users
+- `/api/v1/admin/users` - Admin-only endpoint for managing user accounts.
+- `/api/v1/admin/products` - Admin-only endpoint for managing products.
 
