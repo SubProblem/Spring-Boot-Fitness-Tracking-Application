@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      database: fitness-tracker
+      port: 27017
+      host: mongodb
+
+jwt:
+  secret: 34872398FHDSFGSFGF78DSF376FSEFDSFGSF423GSDF
+  cookie:
+    name: subproblem
+    expirationDate: 86400000
