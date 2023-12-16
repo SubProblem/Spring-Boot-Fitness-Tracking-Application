@@ -35,3 +35,37 @@ The application exposes the following RESTful API endpoints:
 - `/api/v1/admin/users` - Admin-only endpoint for managing user accounts.
 - `/api/v1/admin/products` - Admin-only endpoint for managing products.
 
+## Deployment using Docker
+
+The application has been Dockerized for easier deployment and management. Below are the steps to deploy the application using Docker:
+
+### Prerequisites
+
+Ensure that Docker is installed on your machine.
+
+### Instructions
+
+1. Clone the repository:
+
+    ```bash
+    git clone <repository_URL>
+    cd fitness-tracking-app
+    ```
+
+2. Build the Docker image:
+
+    ```bash
+    docker build -t fitness-app .
+    ```
+
+3. Run Docker Compose to start the application:
+
+    ```bash
+    docker-compose up
+    ```
+
+This will start the Fitness Tracking Application, including the Spring Boot backend, MongoDB database, and Mongo Express for managing the database. Access the application at `http://localhost:8080`.
+
+
+
+
