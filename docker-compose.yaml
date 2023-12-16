@@ -1,5 +1,12 @@
 version: "3.8"
 services:
+  spring-app:
+    image: fitness-app
+    container_name: spring-app
+    ports:
+      - 8080:8080
+    restart: always
+
   mongodb:
     image: mongo
     container_name: mongodb
@@ -10,6 +17,7 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=rootuser
       - MONGO_INITDB_ROOT_PASSWORD=rootpass
+
   mongo-express:
     image: mongo-express
     container_name: mongo-express
@@ -20,6 +28,7 @@ services:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=rootuser
       - ME_CONFIG_MONGODB_ADMINPASSWORD=rootpass
       - ME_CONFIG_MONGODB_SERVER=mongodb
+
 volumes:
   data: {}
 
