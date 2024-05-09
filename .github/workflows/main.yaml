@@ -41,4 +41,11 @@ jobs:
         run: docker rm -f springboot-fitness-tracking-app-container
 
       - name: Run Docker Container
-        run: docker run -d -p 8080:8080 --restart always --name springboot-fitness-tracking-app-container subproblem/fitness-tracking-app:latest
+        run: |
+          docker network create mynetwork  
+          docker run -d \
+          -p 8080:8080 \
+          --restart always \
+          --name springboot-fitness-tracking-app-container \
+          --network mynetwork \          # Connect container to specified Docker network
+          subproblem/fitness-tracking-app:latest
