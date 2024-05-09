@@ -38,14 +38,14 @@ jobs:
         run: docker pull subproblem/fitness-tracking-app:latest
 
       - name: Delete Old Container
-        run: docker rm -f springboot-fitness-tracking-app-container
+        run: docker rm -f springboot-fitness-tracking-app-container || true
 
       - name: Run Docker Container
         run: |
-          docker network create mynetwork  
           docker run -d \
-          -p 8080:8080 \
-          --restart always \
-          --name springboot-fitness-tracking-app-container \
-          --network mynetwork \          # Connect container to specified Docker network
-          subproblem/fitness-tracking-app:latest
+          
+            -p 8080:8080 \
+            --restart always \
+            --name springboot-fitness-tracking-app-container \
+            --network mynetwork \
+            subproblem/fitness-tracking-app:latest
