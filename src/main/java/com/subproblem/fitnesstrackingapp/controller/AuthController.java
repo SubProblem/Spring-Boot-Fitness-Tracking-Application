@@ -23,7 +23,7 @@ public class AuthController {
     private final AuthenticationService authenticationService;
     private final LogOutService logOutService;
 
-
+    // add temp comment
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
         return registerService.registerUser(request);
